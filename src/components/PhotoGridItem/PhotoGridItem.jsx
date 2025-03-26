@@ -43,23 +43,22 @@ const Image = styled.img`
 `;
 
 const Tags = styled.ul`
-  display: flex;
-  gap: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 4px 0;
 `;
 
 const Tag = styled.li`
+  display: inline;
   padding: 4px 8px;
   background: var(--color-gray-300);
   font-size: 0.875rem;
   font-weight: 475;
   color: var(--color-gray-800);
-  white-space: nowrap;
-  overflow: hidden;
-  min-width: max-content;
 
-  &:last-child {
-    min-width: 0px;
-    text-overflow: ellipsis;
+  &:not(:last-of-type) {
+    margin-right: 8px;
   }
 `;
 
